@@ -9,6 +9,15 @@ body {
   position: absolute;
   left: 20px;
   top: 20px;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 700;
 }
+
+.welcome-text {
+  text-align: center;
+  margin-top: 250px;
+  font-family: 'Quattrocento', serif;
+  color: white;
+  font-size: 35px;
+}
+
