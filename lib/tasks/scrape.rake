@@ -7,7 +7,7 @@ namespace :nokogiri do
 doc = Nokogiri::HTML(open('http://www.mta.info/status/serviceStatus.txt').read)
 
 line_index_number = 1
-train = 2
+train = 1
 
     while line_index_number < 12
       name = doc.xpath("//subway//line[#{line_index_number}]//name")
