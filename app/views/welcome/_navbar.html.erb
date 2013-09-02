@@ -1,0 +1,24 @@
+<nav>
+  <ul class="navbar">
+    <li>
+      <a href="#">
+        <% if user_signed_in? %>
+        <%= current_user.email %>
+        <% else %>
+        <%= link_to "LOG IN", new_user_session_path, id: "new_session_link"%>
+        <!-- above was set up for ajax call into the navbar to log in -->
+        <% end %>
+      </a>
+      <% if user_signed_in? %>
+      <ul>
+        <li><a href="#">EDIT ALERTS</a></li>
+        <li><a href="#">EDIT ACCOUNT</a></li>
+        <li><%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %></li>
+      </ul>
+      <% end %>
+    </li>
+    <li><a href="">HOW IT WORKS</a></li>
+    <li><a href="">ABOUT</a></li>
+    <li><a href="">CONTACT</a></li>
+  </ul>
+</nav>

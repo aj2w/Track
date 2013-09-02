@@ -77,5 +77,18 @@ SubwayStatus::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  ### EDIT ALL OF THE BELOW FOR MAILING IN PRODUCTION ###
+
   # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+#   ActionMailer::Base.delivery_method = :smtp
+# ActionMailer::Base.smtp_settings = {
+#    :tls => true,
+#    :address => "smtp.gmail.com",
+#    :port => 587,
+#    :domain => "gmail.com",
+#    :authentication => :login,
+#    :user_name => "[username]",
+#    :password => "[password]"
+ }
 end

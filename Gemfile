@@ -12,6 +12,7 @@ gem 'pry'
 gem 'nokogiri'
 gem 'sanitize'
 gem 'devise'
+gem 'mailcatcher' #might need to remove in production
 
 
 group :doc do
