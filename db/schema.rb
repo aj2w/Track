@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130902151423) do
+ActiveRecord::Schema.define(version: 20130902204534) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alerts", force: true do |t|
+    t.string "train"
+    t.time   "time_to_send"
+  end
 
   create_table "trains", force: true do |t|
     t.string   "name"
