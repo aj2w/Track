@@ -14,6 +14,7 @@ gem 'sanitize'
 gem 'devise'
 gem "combined_time_select"
 gem 'mailcatcher' #might need to remove in production
+gem 'env'
 
 
 group :doc do
