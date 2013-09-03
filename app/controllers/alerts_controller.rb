@@ -4,4 +4,8 @@ class AlertsController < ApplicationController
     @alerts = Alert.all
   end
 
+  def new
+    @alert = Alert.new
+  end
+
 end

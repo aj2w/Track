@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 20130902204534) do
   enable_extension "plpgsql"
 
   create_table "alerts", force: true do |t|
-    t.string "train"
-    t.time   "time_to_send"
+    t.time    "time_to_send"
+    t.integer "train_id"
+    t.integer "user_id"
   end
 
   create_table "trains", force: true do |t|

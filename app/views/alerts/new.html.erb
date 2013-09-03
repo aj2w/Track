@@ -1,0 +1,6 @@
+<%= form_for @alert do |f| %>
+<%= f.label "Which line?" %>
+<%= f.collection_select :train_id, Train.all, :id, :name %><br>
+
+<%= f.submit "Submit" -%>
+<% end %>
