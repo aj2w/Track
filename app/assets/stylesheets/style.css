@@ -1,6 +1,7 @@
 body {
-  background: url(subway_updated.jpg) no-repeat center center fixed;
-  background-size: cover;
+  /*background: url(subway_updated.jpg) no-repeat center center fixed;*/
+  /*background-size: cover;*/
+  background: gray;
 }
 
 .title {

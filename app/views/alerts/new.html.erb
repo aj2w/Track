@@ -2,8 +2,10 @@
 <%= f.label "Which line?" %>
 <%= f.collection_select :train_id, Train.all, :id, :name %><br>
 
-   <%= f.label :time_to_send, "Start Time" %><br />
-    <%= f.time_select :time_to_send %>
+<%= f.label :time_to_send, "Time to receive message" %><br />
+<%= time_select 'alert', 'time_to_send', {:minute_step => 15, :ampm => true} %>
+
+<%= f.hidden_field :user_id, :value => current_user.id %>
 
 <%= f.submit "Submit" -%>
 <% end %>
