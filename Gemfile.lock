@@ -37,7 +37,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    combined_time_select (1.0.1)
     daemons (1.1.9)
     devise (3.0.0)
       bcrypt-ruby (~> 3.0)
@@ -162,7 +161,6 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
-  combined_time_select
   devise
   env
   jbuilder (~> 1.2)
