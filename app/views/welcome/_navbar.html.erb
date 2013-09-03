@@ -5,7 +5,7 @@
         <% if user_signed_in? %>
         <%= current_user.email %>
         <% else %>
-        <%= link_to "LOG IN", new_user_session_path, id: "new_session_link"%>
+        <a data-toggle="modal" href="#login-modal">LOG IN</a>
         <!-- above was set up for ajax call into the navbar to log in -->
         <% end %>
       </a>
@@ -17,8 +17,8 @@
       </ul>
       <% end %>
     </li>
-    <li><a href="">HOW IT WORKS</a></li>
     <li><a data-toggle="modal" href="#About-modal">ABOUT</a></li>
     <li><a href="">CONTACT</a></li>
+    <li><a href="">DASHBOARD</a></li>
   </ul>
 </nav>

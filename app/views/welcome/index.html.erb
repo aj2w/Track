@@ -2,14 +2,13 @@
 
 <div class="title">TRACK</div>
 
-
 <div class="container">
   <div class="welcome-text">Daily MTA service status updates, personalized</div><br>
   <% if user_signed_in? %>
   <div class="welcome-alert-form"><%= render '/alerts/form' %></div>
   <% else %>
-  <div class="welcome-alert-form"><a data-toggle="modal" href="#login-modal">Log In</a></div>
-  <div class="welcome-alert-form"><a data-toggle="modal" href="#create-account-modal">Create Account</a></div>
+  <div class="welcome-alert-form"><button data-toggle="modal" href="#login-modal">Log In</button></div>
+  <div class="welcome-alert-form"><button data-toggle="modal" href="#create-account-modal">Create Account</button></div>
   <% end %>
 </div>
 
