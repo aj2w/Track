@@ -3,7 +3,7 @@
 <%= f.collection_select :train_id, Train.all, :id, :name %><br>
 
 <%= f.label :time_to_send, "Time to receive message" %><br />
-<%= time_select 'alert', 'time_to_send', {:minute_step => 15, :ampm => true} %>
+<%= time_select 'alert', 'time_to_send', {:minute_step => 15, :ampm => true, :ignore_date => true} %>
 
 <%= f.hidden_field :user_id, :value => current_user.id %>
 
