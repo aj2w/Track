@@ -2,5 +2,8 @@
 <%= f.label "Which line?" %>
 <%= f.collection_select :train_id, Train.all, :id, :name %><br>
 
+   <%= f.label :time_to_send, "Start Time" %><br />
+    <%= f.time_select :time_to_send %>
+
 <%= f.submit "Submit" -%>
 <% end %>
