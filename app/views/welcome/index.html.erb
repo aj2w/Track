@@ -4,25 +4,17 @@
 
 
 <div class="container">
-  <div class="welcome-text">Daily MTA service status updates, personalized</div>
-
-  <!-- Modal -->
-  <div class="modal fade" id="About-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">About</h4>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+  <div class="welcome-text">Daily MTA service status updates, personalized</div><br>
+  <% if user_signed_in? %>
+  <div class="welcome-alert-form"><%= render '/alerts/form' %></div>
+  <% else %>
+  <div class="welcome-alert-form"><a data-toggle="modal" href="#login-modal">Log In</a></div>
+  <div class="welcome-alert-form"><a data-toggle="modal" href="#create-account-modal">Create Account</a></div>
+  <% end %>
+</div>
 
 
-  <br>
-</div><!-- /container -->
+  <!-- Modals -->
+<%= render 'aboutmodal' %>
+<%= render 'loginmodal' %>
+<%= render 'createaccountmodal' %>

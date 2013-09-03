@@ -1,3 +1,3 @@
-window.onload = function(){
-  $('#myModal').modal('hide');
-};
+// window.onload = function(){
+//   $('#myModal').modal('hide');
+// };
