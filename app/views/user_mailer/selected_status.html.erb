@@ -9,6 +9,10 @@ Current status for the <strong><%= @train.name %></strong> line:<br><br>
 <strong>Details: </strong><%= @train.text %>
 <% end %><br><br>
 
+<% if @train.time? %>
+<strong>Status last updated: </strong><%= @train.time %>
+<% end %><br><br>
+
 -------<br>
 Disclaimer: The above information is pulled from the MTA.info website. Incorrect information listed there will be reflected here. To unsubscribe or to change your preferences, visit your dashboard page
 
