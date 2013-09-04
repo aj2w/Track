@@ -6,7 +6,7 @@
   <% if user_signed_in? %>
     <div class="welcome-alert-form lato"><%= render '/alerts/form' %></div>
   <% else %>
-    <div class="welcome-alert-form lato"><button data-toggle="modal" href="#login-modal" class="btn">Log In</button></div>
+    <div class="welcome-alert-form lato"><button data-toggle="modal" href="#login-modal" class="btn">Log In</button></div><br>
     <div class="welcome-alert-form lato"><button data-toggle="modal" href="#create-account-modal" class="btn">Create Account</button></div>
   <% end %>
 </div>
