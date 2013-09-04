@@ -1,9 +1,5 @@
 class AlertsController < ApplicationController
 
-  def index
-    @alerts = Alert.all
-  end
-
   def new
     @alert = Alert.new
   end
@@ -30,7 +26,7 @@ class AlertsController < ApplicationController
     end
   end
 
-   def destroy
+  def destroy
     @alert = Alert.find(params[:id])
     @alert.destroy
     redirect_to dashboard_path
@@ -39,7 +35,7 @@ class AlertsController < ApplicationController
 private
   #This is all my privates below
   def alert_params
-    params.require(:alert).permit(:time_to_send, :train_id, :user_id)
+    params.require(:alert).permit(:name, :time_to_send, :train_id, :user_id)
   end
 
 end

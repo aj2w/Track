@@ -2,7 +2,7 @@
 
   <thead>
     <tr>
-      <th>ID</th>
+      <th>Alert Name</th>
       <th>Time</th>
       <th>Train</th>
       <th>Options</th>
@@ -12,8 +12,8 @@
   <tbody>
     <% @alerts.each do |alert| %>
     <tr>
-      <td>Alert #<%= alert.id %></td>
-      <td><%= alert.time_to_send.strftime("%I:%M") %></td>
+      <td><%= alert.name %></td>
+      <td><%= alert.time_to_send.strftime("%I:%M %p") %></td>
       <td><%= alert.train.name %></td>
       <td>
         <%= link_to "<i class=\"icon-edit icon-white\"></i> Edit".html_safe, edit_alert_path(:id => alert.id), {:class => "btn", id: alert.id, remote: true} %>

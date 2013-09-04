@@ -25,10 +25,10 @@ SubwayStatus::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.assets.debug = true
 
   ### BELOW FOUR LINES FOR USE WITH MAILCATCHER ###
-  # config.assets.debug = true
-  # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
 
