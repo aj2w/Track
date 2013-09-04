@@ -11,9 +11,9 @@ body {
 }
 
 .alert {
-  background-color:rgba(237,24,24,0.5);
+  background-color:rgba(237,24,24,0.8);
   z-index: 1000;
-    color: white;
+  color: white;
   width: auto;
 }
 
