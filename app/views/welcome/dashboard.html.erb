@@ -1,22 +1,32 @@
-  <div class="title quattro">TRACK</div>
-  <%= render '/welcome/navbar' %>
+<div class="title quattro">TRACK</div>
+<%= render '/welcome/navbar' %>
 
-<div class="dashboard-container">
-  <div class="dashboard-text quattro">Dashboard</div><br>
-  <div class="border-container"></div>
+<div class="dashboard-text quattro">Dashboard</div><br>
+<div class="border-container"></div>
 
-<div class="dashboard-left">
-<div class="dashboard-sub-text lato">User Alerts</div><br>
-<%= render 'alertstable' %>
+<div class="dashboard-left-container">
+
+  <div class="dashboard-left dashboard-top lato">
+    User Alerts<br><br>
+    <%= link_to "<i class=\"icon-edit icon-white\"></i> Add New Alert".html_safe, new_alert_path, {:class => "btn btn-primary", :id => "add-alert", remote: true} %>
+  </div>
+
+  <div class="dashboard-left dashboard-bottom lato">User Settings</div>
 </div>
 
-<div class="dashboard-right">
-<div class="dashboard-sub-text lato">Administrative</div><br>
-<button data-toggle="modal" href="#edit-user-modal" class="btn">Edit Account Settings</button>
-<br></br>
-</div>
+<div class="dashboard-right-container">
+  <div class="dashboard-right dashboard-top">
+    <%= render 'alertstable' %>
+  </div>
+
+  <div class="dashboard-right dashboard-bottom">
+    <button data-toggle="modal" href="#edit-user-modal" class="btn">Edit Account Settings</button>
+  </div>
 </div>
 
 <!-- Modal -->
 <%= render 'aboutmodal' %>
 <%= render 'edituser' %>
+
+
+<!-- dashbord left becoms dashboard top -->

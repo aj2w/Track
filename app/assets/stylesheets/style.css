@@ -82,39 +82,71 @@ body .narrowmodal {
   font-size: 35px;
 }
 
-.dashboard-sub-text {
+/*Wrapper for left-hand side*/
+.dashboard-left-container {
+  position: relative;
+  left: 10%;
+}
+
+/*Formatting for left hand side*/
+.dashboard-left {
   text-align: center;
+  position: absolute;
   color: white;
   font-size: 20px;
+  width: 150px;
 }
 
-.dashboard-left {
+/*Wrapper for right-hand side*/
+.dashboard-right-container {
   position: absolute;
-  left: 12%;
+  right: 68%;
 }
 
+/*Formatting for right-hand side*/
 .dashboard-right {
-  text-align: center;
+  /*text-align: center;*/
   position: absolute;
-  right: 22%;
+  color: white;
+  font-size: 20px;
+  width: 700px;
 }
+
+
+/*Top elements*/
+.dashboard-top {
+  top: 20%;
+  position: absolute;
+}
+
+/*Bottom elements*/
+.dashboard-bottom {
+  top: 400px;
+  position: absolute;
+}
+
 
 .border-container {
   height: 500px;
   width: 3px;
   position: absolute;
-  left: 50%;
+  left: 25%;
   border-right: 2px solid white;
 }
 
-td {
-  padding: 5px;
+th {
+  padding-right: 20px;
+  padding-left: 20px;
     font-family: 'Lato', sans-serif;
   color: white;
 }
 
-th {
-  padding: 5px;
+td {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
     font-family: 'Lato', sans-serif;
   color: white;
 }
+
