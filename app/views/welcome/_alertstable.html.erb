@@ -22,7 +22,7 @@
 
     </tr>
     <% end %>
-    <tr><td>Add New Alert</td></tr>
+    <tr><td><%= link_to "<i class=\"icon-edit icon-white\"></i> Add New Alert".html_safe, new_alert_path, {:class => "btn", :id => "add-alert", remote: true} %></td></tr>
   </tbody>
 
 </table>
