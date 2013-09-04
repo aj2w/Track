@@ -4,8 +4,13 @@
         <div class="modal-header">
           <h4 class="quattro">ABOUT</h4>
         </div>
-        <div class="modal-body">
-          Track is designed to pull subway service data on a regular basis (usually every ~15 minutes) from the MTA's website.
+        <div class="modal-body lato">
+          Track pulls service data from the MTA's website, typically every 15 minutes. The data is then matched against a database of users' alerts. When a user's requested alert time matches the current time, the server will send an email to the user's address containing a short summary of the requested subway line's service status. <br><br><br>
+
+          Example:<br>
+          Fred typically takes the L train into Manhattan each morning at approximately 8:45. He creates a Track account and adds a new alert for the L train at 8:15 AM. Just like that, Fred can know -- before he even leaves his apartment -- if the L train will have any service issues that morning. <br><br><br>
+
+          Track was created as a final project at General Assembly's Web Development Immersive class.
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

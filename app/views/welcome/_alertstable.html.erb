@@ -15,12 +15,15 @@
       <td>Alert #<%= alert.id %></td>
       <td><%= alert.time_to_send.strftime("%I:%M") %></td>
       <td><%= alert.train.name %></td>
-      <td><a class="btn" href="#"><i class="icon-edit icon-white"></i> Edit</a>
-        <a class="btn btn-danger" href="#"><i class="icon-remove icon-white"></i> Delete</a>
-      </td>
+      <td><%= link_to "<i class=\"icon-edit icon-white\"></i>Edit".html_safe, edit_alert_path(:id => alert.id), {:class => "btn", id: alert.id} -%></td>
+
     </tr>
     <% end %>
     <tr><td>Add New Alert</td></tr>
   </tbody>
 
 </table>
+
+<!-- <td><a class="btn" href=""><i class="icon-edit icon-white"></i> Edit</a>
+        <a class="btn btn-danger" href="#"><i class="icon-remove icon-white"></i> Delete</a>
+      </td> -->

@@ -19,6 +19,17 @@ class AlertsController < ApplicationController
     end
   end
 
+  def edit
+    @alert = Alert.find(params[:id])
+  end
+
+  def update
+    @alert = Alert.find(params[:id])
+    if @alert.update_attributes(alert_params)
+      redirect_to dashboard_path, notice: 'Alert successfully updated'
+    end
+  end
+
 private
   #This is all my privates below
   def alert_params
