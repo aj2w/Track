@@ -1,7 +1,22 @@
 body {
+  /*background-image: image-url("subway_updated.jpg");*/
+  /*background-repeat: no-repeat;*/
   background: url(subway_updated.jpg) no-repeat center center fixed;
   background-size: cover;
-  /*background: gray;*/
+}
+
+.notice {
+  background-color:rgba(237,24,24,0.8);
+  z-index: 1000;
+  color: white;
+  width: auto;
+}
+
+.alert {
+  background-color:rgba(237,24,24,0.5);
+  z-index: 1000;
+    color: white;
+  width: auto;
 }
 
 .quattro {
