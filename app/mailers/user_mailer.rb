@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "track.automailer@gmail.com"
 
   def selected_status(user, alert)
     @greeting = "Hi there"
