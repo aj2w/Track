@@ -1,3 +1,5 @@
-// window.onload = function(){
-//   $('#myModal').modal('hide');
-// };
+window.onload = function(){
+  $('.title').click(function(){
+    window.location.href = "/";
+  });
+};

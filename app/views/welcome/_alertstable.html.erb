@@ -1,4 +1,4 @@
-<table id="alerts-table">
+<table id="table">
 
   <thead>
     <tr>
@@ -15,9 +15,12 @@
       <td>Alert #<%= alert.id %></td>
       <td><%= alert.time_to_send.strftime("%I:%M") %></td>
       <td><%= alert.train.name %></td>
-      <td><i class="icon-edit"></i><i class="icon-remove-circle"></i></td>
+      <td><a class="btn" href="#"><i class="icon-edit icon-white"></i> Edit</a>
+        <a class="btn btn-danger" href="#"><i class="icon-remove icon-white"></i> Delete</a>
+      </td>
     </tr>
     <% end %>
+    <tr><td>Add New Alert</td></tr>
   </tbody>
 
 </table>

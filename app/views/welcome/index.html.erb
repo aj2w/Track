@@ -2,14 +2,14 @@
 
 <div class="container">
   <div class="welcome-text quattro">Daily MTA service status updates, personalized</div><br>
+
   <% if user_signed_in? %>
-  <div class="welcome-alert-form lato"><%= render '/alerts/form' %></div>
+    <div class="welcome-alert-form lato"><%= render '/alerts/form' %></div>
   <% else %>
-  <div class="welcome-alert-form lato"><button data-toggle="modal" href="#login-modal">Log In</button></div>
-  <div class="welcome-alert-form lato"><button data-toggle="modal" href="#create-account-modal">Create Account</button></div>
+    <div class="welcome-alert-form lato"><button data-toggle="modal" href="#login-modal" class="btn">Log In</button></div>
+    <div class="welcome-alert-form lato"><button data-toggle="modal" href="#create-account-modal" class="btn">Create Account</button></div>
   <% end %>
 </div>
-
 
   <!-- Modals -->
 <%= render 'aboutmodal' %>

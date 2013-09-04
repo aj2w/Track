@@ -1,13 +1,13 @@
-<%= form_for @alert do |f| %>
-<%= f.label "Which line?" %>
-<%= f.collection_select :train_id, Train.all, :id, :name %>
-
-<%= f.label :time_to_send, "Time to receive message" %>
-<%= time_select 'alert', 'time_to_send', {:minute_step => 15, :ampm => true, :ignore_date => true} %>
+<%= form_for([@alert], html: {class: 'form-inline'}) do |f| %>
+<%= f.label "Which line?", {:class => "welcome-alert-form"} %>
+<%= f.collection_select :train_id, Train.all, :id, :name, {}, {:class => "narrow"} %>
+&nbsp;&nbsp;&nbsp;
+<%= f.label :time_to_send, "Receive status update at?", {:class => "welcome-alert-form"} %>
+<%= time_select 'alert', 'time_to_send', {:minute_step => 15, :ampm => true, :ignore_date => true}, {:class => "narrow"} %>
 
 <% if user_signed_in? %>
 <%= f.hidden_field :user_id, :value => current_user.id %>
 <% end %>
-
-<%= f.submit "Submit" -%>
+&nbsp;&nbsp;&nbsp;
+<%= f.submit "Submit", {:class => "btn"} -%>
 <% end %>

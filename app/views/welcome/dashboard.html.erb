@@ -1,8 +1,18 @@
 <div class="dashboard-container">
   <div class="dashboard-text quattro">Dashboard</div><br>
 
-
-
+<div class="dashboard-left">
+<div class="dashboard-sub-text lato">User Alerts</div><br>
 <%= render 'alertstable' %>
-
 </div>
+
+<div class="dashboard-right">
+<div class="dashboard-sub-text lato">Administrative</div><br>
+<button data-toggle="modal" href="#edit-user-modal" class="btn">Edit Account</button>
+<br></br>
+</div>
+</div>
+
+<!-- Modal -->
+<%= render 'aboutmodal' %>
+<%= render 'edituser' %>
