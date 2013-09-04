@@ -1,0 +1,23 @@
+<table id="alerts-table">
+
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Time</th>
+      <th>Train</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alerts.each do |alert| %>
+    <tr>
+      <td>Alert #<%= alert.id %></td>
+      <td><%= alert.time_to_send.strftime("%I:%M") %></td>
+      <td><%= alert.train.name %></td>
+      <td><i class="icon-edit"></i><i class="icon-remove-circle"></i></td>
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>

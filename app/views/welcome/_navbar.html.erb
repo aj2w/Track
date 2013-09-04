@@ -1,12 +1,11 @@
 <nav>
-  <ul class="navbar">
+  <ul class="navbar quattro">
     <li>
       <a href="#">
         <% if user_signed_in? %>
         <%= current_user.email %>
         <% else %>
         <a data-toggle="modal" href="#login-modal">LOG IN</a>
-        <!-- above was set up for ajax call into the navbar to log in -->
         <% end %>
       </a>
       <% if user_signed_in? %>

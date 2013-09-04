@@ -6,10 +6,13 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 
 <body>
+  <div class="title quattro">TRACK</div>
+  <%= render 'navbar' %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 

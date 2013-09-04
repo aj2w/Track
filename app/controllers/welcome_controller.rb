@@ -4,6 +4,10 @@ class WelcomeController < ApplicationController
     @alert = Alert.new
   end
 
+  def dashboard
+    @alerts = Alert.where(:user_id == current_user.id)
+  end
+
 private
   #This is all my privates below
   def alert_params
