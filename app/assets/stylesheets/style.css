@@ -1,9 +1,9 @@
 body {
-  /*background-image: url(image_path('subway_updated.jpg'));*/
+  background-image: url(image_path('https://s3.amazonaws.com/TrackAppImage/subway_updated.jpg'));
   /*background-image: image-url('subway_updated.jpg');*/
   /*background-image: asset-url('subway_updated.jpg', image);*/
-  background: url(https://s3.amazonaws.com/TrackAppImage/subway_updated.jpg) no-repeat center center fixed;
-  background-size: cover;
+  /*background: url(https://s3.amazonaws.com/TrackAppImage/subway_updated.jpg) no-repeat center center fixed;*/
+  /*background-size: cover;*/
 }
 
 .notice {
