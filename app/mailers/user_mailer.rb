@@ -6,6 +6,7 @@ class UserMailer < ActionMailer::Base
     @user = user
     @alert = alert
     @train = Train.find(@alert.train_id)
+
     # binding.pry
     mail to: user.email, subject: "[TRACK] #{@train.name } train status for #{Date.today.strftime("%D")}"
   end

@@ -1,14 +1,15 @@
 <div class="service-alert">
+Hi there,<br><br>
 
-  Hi there,
+Current status for the <strong><%= @train.name %></strong> line:<br><br>
 
-The <strong><%= @train.name %></strong> train's status is <strong><%= @train.status %></strong>.<br><br>
+<strong><%= @train.status %></strong>
 
 <% if @train.text? %>
 <strong>Details: </strong><%= @train.text %>
 <% end %><br><br>
 
 -------<br>
-Disclaimer: The above information is pulled from the MTA.info website. Incorrect information listed there will be reflected here. To unsubscribe or to change your preferences, visit your dashboard page at <%= link_to "dashboard", root_path %>
+Disclaimer: The above information is pulled from the MTA.info website. Incorrect information listed there will be reflected here. To unsubscribe or to change your preferences, visit your dashboard page
 
 </div>
