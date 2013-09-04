@@ -56,8 +56,6 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  host: localhost
   database: SubwayStatus_production
   pool: 5
-  username: aj2w
-  password:
+

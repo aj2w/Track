@@ -10,12 +10,10 @@ namespace :status do
       current_time_in_mins = Time.now.hour * 60 + Time.now.min
       time_diff = time_in_mins - current_time_in_mins
 
-      # binding.pry
-
-      # if time_diff <= 15 #MUST BE EQUAL TO RAKE SCHEDULE INTERVAL
+      if time_diff <= 15 #MUST BE EQUAL TO RAKE SCHEDULE INTERVAL
         @user = User.find(alert.user_id)
         UserMailer.selected_status(@user, @alert).deliver
-      # end
+      end
     end
 
   end
