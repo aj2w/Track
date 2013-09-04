@@ -8,17 +8,19 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'pry'
 gem 'nokogiri'
 gem 'sanitize'
 gem 'devise'
-gem 'mailcatcher' #might need to remove in production
 gem 'dotenv-rails', :groups => [:development, :test]
-
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :development, :test do
+  gem 'mailcatcher'
+  gem 'pry'
 end
 
 # Use ActiveModel has_secure_password
