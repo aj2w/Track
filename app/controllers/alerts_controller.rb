@@ -13,7 +13,7 @@ class AlertsController < ApplicationController
 
     if user_signed_in?
       @alert.save
-      redirect_to :root #change to dashboard
+      redirect_to dashboard_path
     else
       redirect_to new_user_session_path
     end
@@ -28,6 +28,12 @@ class AlertsController < ApplicationController
     if @alert.update_attributes(alert_params)
       redirect_to dashboard_path, notice: 'Alert successfully updated'
     end
+  end
+
+   def destroy
+    @alert = Alert.find(params[:id])
+    @alert.destroy
+    redirect_to dashboard_path
   end
 
 private
