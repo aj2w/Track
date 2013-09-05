@@ -1,12 +1,12 @@
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label "Email:", {:class => "lato"} %>
+  <div><%= f.label "Email:", {:class => "lato"} %><br>
   <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label "Password:", {:class => "lato"} %>
-  <%= f.password_field :password %></div>
+  <div><%= f.label "Password:", {:class => "lato"} %><br>
+  <%= f.password_field :password %></div><br>
 
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %><%= f.label "Remember me", {:class => "lato checkbox inline"} %> </div>
+    <div><%= f.label "Remember me", {:class => "lato"} %> &nbsp <%= f.check_box :remember_me %> </div>
   <% end -%>
 
   <div><%= f.submit "Sign in", {:class => "btn btn-primary"} %></div>

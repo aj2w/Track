@@ -5,10 +5,12 @@
   <div class="welcome-text quattro">Daily MTA service status updates, personalized</div><br>
 
   <% if user_signed_in? %>
-    <div class="welcome-alert-form lato"><%= render '/alerts/form' %></div>
+    <div class="welcome-alert-form lato"><%= link_to "Go to Dashboard", dashboard_path, {:class => "btn btn-primary"} %></div><br>
+    <div class="welcome-alert-form lato"><%= link_to "View Current Subway Status", dashboard_path, {:class => "btn btn-primary"} %></div>
   <% else %>
-    <div class="welcome-alert-form lato"><button data-toggle="modal" href="#login-modal" class="btn">Log In</button></div><br>
-    <div class="welcome-alert-form lato"><button data-toggle="modal" href="#create-account-modal" class="btn">Create Account</button></div>
+
+    <div class="welcome-alert-form lato"><button data-toggle="modal" href="#login-modal" class="btn btn-primary">Log In</button></div><br>
+    <div class="welcome-alert-form lato"><button data-toggle="modal" href="#create-account-modal" class="btn btn-primary">Create Account</button></div>
   <% end %>
 </div>
 

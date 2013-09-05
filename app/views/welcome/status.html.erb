@@ -1,0 +1,30 @@
+<div class="title quattro">TRACK</div>
+<%= render '/welcome/navbar' %>
+
+<div class="dashboard-text quattro">Status</div><br>
+
+<div class="status-table-container">
+
+<table>
+  <thead>
+    <tr>
+      <th>Train</th>
+      <th>Status</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trains.each do |train| %>
+    <% @train = train %>
+    <tr>
+      <td><%= train.name %></td>
+      <td><%=train.status %></td>
+      <td><i class="icon-info icon-white" id="status_<%=train.id %>"></i></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+</div>
