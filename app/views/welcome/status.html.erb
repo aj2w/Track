@@ -5,26 +5,96 @@
 
 <div class="status-table-container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Train</th>
-      <th>Status</th>
-      <th>Details</th>
-    </tr>
-  </thead>
+  <table>
+    <thead>
+      <tr>
+        <th>Train</th>
+        <th>Status</th>
+        <th>Details</th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @trains.each do |train| %>
-    <% @train = train %>
-    <tr>
-      <td><%= train.name %></td>
-      <td><%=train.status %></td>
-      <td><i class="icon-info icon-white" id="status_<%=train.id %>"></i></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+    <tbody>
+      <tr>
+        <td class="status_td"><img src="/assets/1.png" /><img src="/assets/2.png" /><img src="/assets/3.png" /></td>
+
+        <td class="status_td"><%= @line123.status %></td>
+        <td class="status_td"><i class="icon-info icon-white" id="line123" data-text="<%= @line123.text %>"></i></td>
+      </tr>
+
+      <tr>
+        <td class="status_td"><img src="/assets/4.png" /><img src="/assets/5.png" /><img src="/assets/6.png" /></td>
+
+        <td class="status_td"><%= @line456.status %></td>
+        <td class="status_td"><i class="icon-info icon-white" id="line456"></i></td>
+      </tr>
+
+      <tr>
+        <td class="status_td"><img src="/assets/7.png" /></td>
+
+        <td class="status_td"><%= @line7.status %></td>
+        <td class="status_td"><i class="icon-info icon-white" id="line7"></i></td>
+      </tr>
+
+      <tr>
+        <td class="status_td"><img src="/assets/a.png" /><img src="/assets/c.png" /><img src="/assets/e.png" /></td>
+
+        <td class="status_td"><%= @lineACE.status %></td>
+        <td class="status_td"><i class="icon-info icon line-info" href="#" data-toggle="popover" id="lineACE" data-content="<%= @lineACE.text %>"></i><br/>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td class="status_td"><img src="/assets/b.png" /><img src="/assets/d.png" /><img src="/assets/f.png" /><img src="/assets/m.png" /></td>
+
+        <td class="status_td"><%= @lineBDFM.status %></td>
+        <td class="status_td"><i class="icon-info icon-white" id="lineBDFM"></i></td>
+      </tr>
+
+      <tr>
+        <td class="status_td"><img src="/assets/g.png" /></td>
+
+        <td class="status_td"><%= @lineG.status %></td>
+        <td class="status_td"><i class="icon-info icon-white" id="lineG"></i></td>
+      </tr>
+
+      <tr>
+        <td class="status_td"><img src="/assets/j.png" /><img src="/assets/z.png" /></td>
+
+        <td class="status_td"><%= @lineJZ.status %></td>
+        <td class="status_td"><i class="icon-info icon-white" id="lineJZ"></i></td>
+      </tr>
+
+      <tr>
+        <td class="status_td"><img src="/assets/l.png" /></td>
+
+        <td class="status_td"><%= @lineL.status %></td>
+        <td class="status_td"><i class="icon-info icon-white" id="lineL"></i></td>
+      </tr>
+
+      <tr>
+        <td class="status_td"><img src="/assets/n.png" /><img src="/assets/q.png" /><img src="/assets/r.png" /></td>
+
+        <td class="status_td"><%= @lineNQR.status %></td>
+        <td class="status_td"><i class="icon-info icon-white" id="lineNQR"></i></td>
+      </tr>
+
+      <tr>
+        <td class="status_td"><img src="/assets/s.png" /></td>
+
+        <td class="status_td"><%= @lineS.status %></td>
+        <td class="status_td"><i class="icon-info icon-white" id="lineS"></i></td>
+      </tr>
+
+      <tr>
+        <td class="status_td"><img src="/assets/sir.png" /></td>
+
+        <td class="status_td"><%= @lineSIR.status %></td>
+        <td class="status_td"><i class="icon-info icon-white" id="lineSIR"></i></td>
+      </tr>
+    </tbody>
+  </table>
 
 
 </div>

@@ -151,3 +151,7 @@ td {
     font-family: 'Lato', sans-serif;
   color: white;
 }
+
+.status_td {
+  color: black;
+}
