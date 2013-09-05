@@ -5,9 +5,9 @@ class AlertsController < ApplicationController
   end
 
   def create
+    @alert = Alert.new(alert_params)
 
     if user_signed_in?
-      @alert = Alert.new(alert_params)
       @alert.save
       redirect_to dashboard_path
     else
