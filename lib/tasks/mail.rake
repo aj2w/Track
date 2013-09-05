@@ -10,9 +10,6 @@ namespace :status do
       alert_time_in_mins = alert.time_to_send.hour * 60 + alert.time_to_send.min
       current_time_in_mins = Time.now.hour * 60 + Time.now.min
       last_time_in_mins = record.last.hour * 60 + record.last.min
-      # time_diff = alert_time_in_mins - current_time_in_mins
-
-      # if time_diff <= 10 && alert_time_in_mins > current_time_in_mins
 
       if alert_time_in_mins > last_time_in_mins && current_time_in_mins > alert_time_in_mins
         @user = User.find(alert.user_id)
