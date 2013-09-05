@@ -21,7 +21,8 @@ class WelcomeController < ApplicationController
   end
 
   def dashboard
-    @alerts = Alert.where(:user_id == current_user.id)
+    @alerts = Alert.find_by user_id: current_user.id
+
 
     @alert = Alert.new
     @line123 = Train.find(1)
