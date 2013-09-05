@@ -79,7 +79,9 @@
         <td class="status_td"><img src=" http://s3.amazonaws.com/TrackAppImage/n.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/q.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/r.png" /></td>
 
         <td class="status_td"><%= @lineNQR.status %></td>
+        <% if @lineNQR.status != "GOOD SERVICE" %>
         <td class="status_td"><div class="btn btn-default line-info" href="#" data-toggle="popover" id="lineNQR" data-content="<%= @lineNQR.text %>">Info</div><br/>
+          <% end %>
       </tr>
 
       <!-- S TRAIN -->
@@ -87,7 +89,9 @@
         <td class="status_td"><img src=" http://s3.amazonaws.com/TrackAppImage/s.png" /></td>
 
         <td class="status_td"><%= @lineS.status %></td>
+         <% if @lineS.status != "GOOD SERVICE" %>
         <td class="status_td"><div class="btn btn-default line-info" href="#" data-toggle="popover" id="lineS" data-content="<%= @lineS.text %>">Info</div><br/>
+          <% end %>
       </tr>
 
       <!-- SIR TRAIN -->
