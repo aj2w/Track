@@ -1,6 +1,11 @@
 class WelcomeController < ApplicationController
 
   def index
+    if user_signed_in?
+      redirect_to dashboard_path
+      return
+    end
+
     @alert = Alert.new
     @line123 = Train.find(1)
     @line456 = Train.find(2)
@@ -17,9 +22,8 @@ class WelcomeController < ApplicationController
 
   def dashboard
     @alerts = Alert.where(:user_id == current_user.id)
-  end
 
-  def status
+    @alert = Alert.new
     @line123 = Train.find(1)
     @line456 = Train.find(2)
     @line7 = Train.find(3)
@@ -32,7 +36,6 @@ class WelcomeController < ApplicationController
     @lineS = Train.find(10)
     @lineSIR = Train.find(11)
   end
-
 
 private
   #This is all my privates below

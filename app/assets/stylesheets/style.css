@@ -73,6 +73,13 @@ body .narrowmodal {
     margin-left: -140;
 }
 
+body .statusmodal {
+    /* new custom width */
+    width: 400px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin-left: -140;
+}
+
 .footnote-text {
   font-size: 12px;
 }

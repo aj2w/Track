@@ -23,7 +23,7 @@ namespace :nokogiri do
 
       train = Train.find(line_index_number)
 
-      no_text = "No text provided by the MTA"
+      no_text = "No further information provided"
 
       if cleaned_text.blank?
         train.update(name: "#{name.inner_text}", status: "#{status.inner_text}", text: "#{no_text}", date: "#{date.inner_text}", time: "#{time.inner_text}")
