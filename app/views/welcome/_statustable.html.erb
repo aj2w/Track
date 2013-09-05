@@ -3,7 +3,7 @@
       <tr>
         <th class="status_td">Train</th>
         <th class="status_td">Status</th>
-        <th class="status_td">Details</th>
+        <th class="status_td"></th>
       </tr>
     </thead>
 
@@ -13,7 +13,9 @@
         <td class="status_td"><img src=" http://s3.amazonaws.com/TrackAppImage/1.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/2.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/3.png" /></td>
 
         <td class="status_td"><%= @line123.status %></td>
+        <% if @line123.status != "GOOD SERVICE" %>
         <td class="status_td"><div class="btn btn-default line-info" href="#" data-toggle="popover" id="line123" data-content="<%= @line123.text %>">Info</div><br/>
+          <% end %>
       </tr>
 
       <!-- 456 TRAIN -->
@@ -21,7 +23,9 @@
         <td class="status_td"><img src=" http://s3.amazonaws.com/TrackAppImage/4.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/5.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/6.png" /></td>
 
         <td class="status_td"><%= @line456.status %></td>
+        <% if @line456.status != "GOOD SERVICE" %>
         <td class="status_td"><div class="btn btn-default line-info" href="#" data-toggle="popover" id="line456" data-content="<%= @line456.text %>">Info</div><br/>
+          <% end %>
       </tr>
 
       <!-- 7 TRAIN -->
@@ -29,7 +33,9 @@
         <td class="status_td"><img src=" http://s3.amazonaws.com/TrackAppImage/7.png" /></td>
 
         <td class="status_td"><%= @line7.status %></td>
+        <% if @line7.status != "GOOD SERVICE" %>
         <td class="status_td"><div class="btn btn-default line-info" href="#" data-toggle="popover" id="line7" data-content="<%= @line7.text %>">Info</div><br/>
+          <% end %>
       </tr>
 
       <!-- ACE TRAIN -->
@@ -37,7 +43,9 @@
         <td class="status_td"><img src=" http://s3.amazonaws.com/TrackAppImage/a.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/c.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/e.png" /></td>
 
         <td class="status_td"><%= @lineACE.status %></td>
+        <% if @lineACE.status != "GOOD SERVICE" %>
         <td class="status_td"><div class="btn btn-default line-info" href="#" data-toggle="popover" id="lineACE" data-content="<%= @lineACE.text %>">Info</div><br/>
+          <% end %>
         </td>
 
       </tr>
@@ -47,7 +55,9 @@
         <td class="status_td"><img src=" http://s3.amazonaws.com/TrackAppImage/b.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/d.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/f.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/m.png" /></td>
 
         <td class="status_td"><%= @lineBDFM.status %></td>
+        <% if @lineBDFM.status != "GOOD SERVICE" %>
         <td class="status_td"><div class="btn btn-default line-info" href="#" data-toggle="popover" id="lineBDFM" data-content="<%= @lineBDFM.text %>">Info</div><br/>
+          <% end %>
       </tr>
 
       <!-- G TRAIN -->
@@ -55,7 +65,9 @@
         <td class="status_td"><img src=" http://s3.amazonaws.com/TrackAppImage/g.png" /></td>
 
         <td class="status_td"><%= @lineG.status %></td>
+        <% if @lineG.status != "GOOD SERVICE" %>
         <td class="status_td"><div class="btn btn-default line-info" href="#" data-toggle="popover" id="lineG" data-content="<%= @lineG.text %>">Info</div><br/>
+          <% end %>
       </tr>
 
       <!-- JZ TRAIN -->
@@ -63,7 +75,9 @@
         <td class="status_td"><img src=" http://s3.amazonaws.com/TrackAppImage/j.png" /><img src=" http://s3.amazonaws.com/TrackAppImage/z.png" /></td>
 
         <td class="status_td"><%= @lineJZ.status %></td>
+        <% if @lineJZ.status != "GOOD SERVICE" %>
         <td class="status_td"><div class="btn btn-default line-info" href="#" data-toggle="popover" id="lineJZ" data-content="<%= @lineJZ.text %>">Info</div><br/>
+          <% end %>
       </tr>
 
       <!-- L TRAIN -->
@@ -71,7 +85,9 @@
         <td class="status_td"><img src=" http://s3.amazonaws.com/TrackAppImage/l.png" /></td>
 
         <td class="status_td"><%= @lineL.status %></td>
+        <% if @lineL.status != "GOOD SERVICE" %>
         <td class="status_td"><div class="btn btn-default line-info" href="#" data-toggle="popover" id="lineL" data-content="<%= @lineL.text %>">Info</div><br/>
+          <% end %>
       </tr>
 
       <!-- NQR TRAIN -->
@@ -99,7 +115,9 @@
         <td class="status_td"><img src=" http://s3.amazonaws.com/TrackAppImage/sir.png" /></td>
 
         <td class="status_td"><%= @lineSIR.status %></td>
+        <% if @lineSIR.status != "GOOD SERVICE" %>
         <td class="status_td"><div class="btn btn-default line-info" href="#" data-toggle="popover" id="lineSIR" data-content="<%= @lineSIR.text %>">Info</div><br/>
+          <% end %>
       </tr>
     </tbody>
   </table>
