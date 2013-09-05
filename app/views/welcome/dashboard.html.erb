@@ -4,11 +4,11 @@
 <div class="dashboard-text quattro">Dashboard</div><br>
 <div class="border-container"></div>
 
-<div class="dashboard-left-container">
 
+<div class="dashboard-left-container">
   <div class="dashboard-left dashboard-top lato">
     User Alerts<br><br>
-    <%= link_to "<i class=\"icon-edit icon-white\"></i> Add New Alert".html_safe, new_alert_path, {:class => "btn btn-primary", :id => "add-alert", remote: true} %>
+    <%= link_to "<i class=\"icon-new icon-white\"></i> Add New Alert".html_safe, new_alert_path, {:class => "btn btn-primary", :id => "add-alert", remote: true} %>
   </div>
 
   <div class="dashboard-left dashboard-bottom lato">User Settings</div>
@@ -27,6 +27,3 @@
 <!-- Modal -->
 <%= render 'aboutmodal' %>
 <%= render 'edituser' %>
-
-
-<!-- dashbord left becoms dashboard top -->
