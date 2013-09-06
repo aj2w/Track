@@ -7,6 +7,6 @@ class UserMailer < ActionMailer::Base
     @alert = alert
     @train = alert.train
 
-    mail to: user.email, subject: "[TRACK] #{@train.name } line status: #{{@train.status}} - #{Date.today.strftime("%D")}"
+    mail to: user.email, subject: "[TRACK] #{@train.name } line status: #{@train.status} - #{Date.today.strftime("%D")}"
   end
 end
