@@ -22,7 +22,7 @@ class AlertsController < ApplicationController
   def update
     @alert = Alert.find(params[:id])
     if @alert.update_attributes(alert_params)
-      redirect_to dashboard_path, notice: 'Alert successfully updated'
+      redirect_to dashboard_path
     end
   end
 

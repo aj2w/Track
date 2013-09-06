@@ -4,4 +4,9 @@ window.onload = function(){
   });
 
   $('.line-info').popover();
+
+  if ($('.alert').length) {
+    $('.alert').addClass('alert-danger');
+  }
+
 };
