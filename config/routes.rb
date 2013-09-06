@@ -3,4 +3,6 @@ SubwayStatus::Application.routes.draw do
   root 'welcome#index'
   resources :alerts
   get '/dashboard' => 'welcome#dashboard'
+  get '/sendgrid' => 'welcome#sendgrid'
+
 end

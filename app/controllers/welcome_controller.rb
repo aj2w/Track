@@ -37,6 +37,9 @@ class WelcomeController < ApplicationController
     @lineSIR = Train.find(11)
   end
 
+  def sendgrid
+  end
+
 private
   #This is all my privates below
   def alert_params
