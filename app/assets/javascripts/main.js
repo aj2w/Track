@@ -9,4 +9,8 @@ window.onload = function(){
     $('.alert').addClass('alert-danger');
   }
 
+  if ($('.notice').length) {
+    $('.alert').addClass('alert-info');
+  }
+
 };
