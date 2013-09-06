@@ -5,12 +5,12 @@ window.onload = function(){
 
   $('.line-info').popover();
 
-  if ($('.alert').length) {
+  if ($('.alert').text().length) {
     $('.alert').addClass('alert-danger');
   }
 
-  if ($('.notice').length) {
-    $('.alert').addClass('alert-info');
+  if ($('.notice').text().length) {
+    $('.notice').addClass('alert-info');
   }
 
 };
