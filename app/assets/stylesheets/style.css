@@ -106,7 +106,7 @@ body .statusmodal {
 /*Wrapper for left-hand side*/
 .dashboard-left-container {
   position: relative;
-  left: 10%;
+  left: 7%;
 }
 
 /*Formatting for left hand side*/
@@ -121,7 +121,7 @@ body .statusmodal {
 /*Wrapper for right-hand side*/
 .dashboard-right-container {
   position: absolute;
-  right: 68%;
+  right: 75%;
 }
 
 /*Formatting for right-hand side*/
@@ -149,7 +149,7 @@ body .statusmodal {
   height: 500px;
   width: 3px;
   position: absolute;
-  left: 25%;
+  left: 20%;
   border-right: 2px solid white;
 }
 
@@ -173,6 +173,6 @@ td {
   color: black;
 }
 
-#alert-name {
-
+#alert_name {
+  font-size: 14px;
 }
