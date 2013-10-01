@@ -15,6 +15,10 @@ namespace :status do
         @user = User.find(alert.user_id)
         UserMailer.selected_status(@user, @alert).deliver
       end
+
+      if alert.recurring == false
+        alert.destroy
+      end
     end
 
     # Below saves the last time the rake was completed

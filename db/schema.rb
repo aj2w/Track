@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130905211237) do
+ActiveRecord::Schema.define(version: 20131001182400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20130905211237) do
     t.time    "time_to_send"
     t.integer "train_id"
     t.integer "user_id"
+    t.boolean "recurring",    default: true
   end
 
   create_table "records", force: true do |t|

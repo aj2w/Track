@@ -7,11 +7,13 @@
 <%= f.label :time_to_send, "Receive update at?", {:class => "welcome-alert-form lato"} %>
 <%= time_select 'alert', 'time_to_send', {:minute_step => 15, :ampm => true, :ignore_date => true} %>
 
-&nbsp;&nbsp;&nbsp;
+<br>
 
 
 <%= f.text_field :name, :placeholder => "Alert name (optional)" %>
 
+
+<%= f.select :recurring, [['Recurring', true], ['One-Time', false]] %>
 
 <% if user_signed_in? %>
 <%= f.hidden_field :user_id, :value => current_user.id %>

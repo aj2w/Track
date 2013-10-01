@@ -5,6 +5,7 @@
       <th>Alert Name</th>
       <th>Time</th>
       <th>Train</th>
+      <th>Recurring?</th>
       <th>Options</th>
     </tr>
   </thead>
@@ -16,6 +17,13 @@
       <td><%= @alert.name %></td>
       <td><%= @alert.time_to_send.strftime("%I:%M %p") %></td>
       <td><%= render 'alertslogos' %></td>
+      <td>
+        <% if @alert.recurring == true %>
+        <p>Recurring</p>
+        <% elsif @alert.recurring == false %>
+        <p>One-Time</p>
+        <% end %>
+      </td>
       <td>
         <%= link_to "<i class=\"icon-edit icon-white\"></i> Edit".html_safe, edit_alert_path(:id => alert.id), {:class => "btn btn-default", id: alert.id, remote: true} %>
         <%= link_to "<i class=\"icon-remove icon-white\"></i> Delete".html_safe, alert, {method: :delete, :class => "btn btn-danger"} %>
