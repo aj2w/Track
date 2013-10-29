@@ -21,6 +21,7 @@ end
 group :development, :test do
   gem 'mailcatcher'
   gem 'pry'
+  gem 'rails-erd'
 end
 
 group :production, :staging do

@@ -2,11 +2,12 @@
 
   <thead>
     <tr>
-      <th>Alert Name</th>
-      <th>Time</th>
-      <th>Train</th>
-      <th>Recurring?</th>
-      <th>Options</th>
+      <th class="alert-table-columns">Alert Name</th>
+      <th class="alert-table-columns">Time</th>
+      <th class="alert-table-columns">Train</th>
+      <th class="alert-table-columns">Recurring?</th>
+      <th class="alert-table-columns">Days</th>
+      <th class="alert-table-columns">[Options]</th>
     </tr>
   </thead>
 
@@ -19,11 +20,12 @@
       <td><%= render 'alertslogos' %></td>
       <td>
         <% if @alert.recurring == true %>
-        <p>Recurring</p>
+        <p>Yes</p>
         <% elsif @alert.recurring == false %>
-        <p>One-Time</p>
+        <p>No</p>
         <% end %>
       </td>
+      <td>placeholder</td>
       <td>
         <%= link_to "<i class=\"icon-edit icon-white\"></i> Edit".html_safe, edit_alert_path(:id => alert.id), {:class => "btn btn-default", id: alert.id, remote: true} %>
         <%= link_to "<i class=\"icon-remove icon-white\"></i> Delete".html_safe, alert, {method: :delete, :class => "btn btn-danger"} %>

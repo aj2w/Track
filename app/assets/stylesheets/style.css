@@ -130,7 +130,7 @@ body .statusmodal {
   position: absolute;
   color: white;
   font-size: 20px;
-  width: 700px;
+  min-width: 900px;
 }
 
 /*Top elements*/
@@ -160,6 +160,11 @@ th {
   color: white;
 }
 
+.alert-table-columns {
+  width: 200px;
+}
+
+
 td {
   padding-right: 20px;
   padding-left: 20px;
@@ -175,4 +180,10 @@ td {
 
 #alert_name {
   font-size: 14px;
+}
+
+.form-holder {
+  background-color:rgba(237,24,24,0.5);
+  padding: 5px;
+  border-radius: 5px;
 }

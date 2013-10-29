@@ -1,24 +1,34 @@
-<%= form_for([@alert]) do |f| %>
+<div class="form-holder">
+
+<%= form_for @alert, :html => {:class => "form-inline"} do |f| %>
+
+
+<%= f.text_field :name, :placeholder => "Alert name", :type => "text" %>
+
+
+&nbsp;
+
+<%= f.label :time_to_send, "When?", {:class => "welcome-alert-form lato"} %>
+<%= time_select 'alert', 'time_to_send', {:minute_step => 15, :ampm => true, :ignore_date => true} %>
+
+&nbsp;
+
 <%= f.label "Train?", {:class => "welcome-alert-form lato"} %>
 <%= f.collection_select :train_id, Train.all, :id, :name, {}, {:class => "narrow"} %>
 
-&nbsp;&nbsp;&nbsp;
+&nbsp;
 
-<%= f.label :time_to_send, "Receive update at?", {:class => "welcome-alert-form lato"} %>
-<%= time_select 'alert', 'time_to_send', {:minute_step => 15, :ampm => true, :ignore_date => true} %>
+<%= f.label "Recurring?", {:class => "welcome-alert-form lato"} %>
+<%= f.select :recurring, [['Yes', true], ['No', false]] %>
 
-<br>
+<%= f.check_box :days['monday'] %>
 
-
-<%= f.text_field :name, :placeholder => "Alert name (optional)" %>
-
-
-<%= f.select :recurring, [['Recurring', true], ['One-Time', false]] %>
 
 <% if user_signed_in? %>
 <%= f.hidden_field :user_id, :value => current_user.id %>
 <% end %>
 
-
+&nbsp;
 <%= f.submit "Submit", {:class => "btn btn-primary"} %>
 <% end %>
+</div>
