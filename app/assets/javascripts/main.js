@@ -1,4 +1,5 @@
 window.onload = function(){
+
   $('.title').click(function(){
     window.location.href = "/";
   });
@@ -13,4 +14,7 @@ window.onload = function(){
     $('.notice').addClass('alert-info');
   }
 
+  $('.alert_recurring').change(function() {
+    $('.days-form').toggle();
+  });
 };

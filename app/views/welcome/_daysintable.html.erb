@@ -1,0 +1,30 @@
+<% days_array = [] %>
+<% if @alert.monday == true %>
+  <% days_array << "M" %>
+  <% end %>
+
+  <% if @alert.tuesday == true %>
+  <% days_array << "T" %>
+  <% end %>
+
+  <% if @alert.wednesday == true %>
+  <% days_array << "W" %>
+  <% end %>
+
+  <% if @alert.thursday == true %>
+  <% days_array << "Th" %>
+  <% end %>
+
+  <% if @alert.friday == true %>
+  <% days_array << "F" %>
+  <% end %>
+
+  <% if @alert.saturday == true %>
+  <% days_array << "Sa" %>
+  <% end %>
+
+  <% if @alert.sunday == true %>
+  <% days_array << "Su" %>
+  <% end %>
+
+<%= days_array.to_s.gsub('"', '').gsub(',','').gsub('[','').gsub(']','') %>

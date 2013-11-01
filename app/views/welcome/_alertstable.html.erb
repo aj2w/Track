@@ -25,7 +25,9 @@
         <p>No</p>
         <% end %>
       </td>
-      <td>placeholder</td>
+      <td>
+        <%= render 'daysintable' %>
+      </td>
       <td>
         <%= link_to "<i class=\"icon-edit icon-white\"></i> Edit".html_safe, edit_alert_path(:id => alert.id), {:class => "btn btn-default", id: alert.id, remote: true} %>
         <%= link_to "<i class=\"icon-remove icon-white\"></i> Delete".html_safe, alert, {method: :delete, :class => "btn btn-danger"} %>

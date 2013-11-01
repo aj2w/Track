@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001191331) do
+ActiveRecord::Schema.define(version: 20131030040317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
 
   create_table "alerts", force: true do |t|
     t.string  "name"
@@ -23,7 +22,14 @@ ActiveRecord::Schema.define(version: 20131001191331) do
     t.integer "train_id"
     t.integer "user_id"
     t.boolean "recurring",    default: true
-    t.hstore  "days",         default: "\"friday\"=>\"true\", \"monday\"=>\"true\", \"sunday\"=>\"true\", \"tuesday\"=>\"true\", \"saturday\"=>\"true\", \"thursday\"=>\"true\", \"wednesday\"=>\"true\""
+    t.boolean "monday",       default: true
+    t.boolean "tuesday",      default: true
+    t.boolean "wednesday",    default: true
+    t.boolean "thursday",     default: true
+    t.boolean "friday",       default: true
+    t.boolean "saturday",     default: true
+    t.boolean "sunday",       default: true
+    t.string  "days_array",                  array: true
   end
 
   create_table "records", force: true do |t|

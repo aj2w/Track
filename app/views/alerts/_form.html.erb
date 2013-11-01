@@ -19,10 +19,24 @@
 &nbsp;
 
 <%= f.label "Recurring?", {:class => "welcome-alert-form lato"} %>
-<%= f.select :recurring, [['Yes', true], ['No', false]] %>
+<%= f.select :recurring, [['Yes', true], ['No', false]], {}, :class => "alert_recurring" %>
 
-<%= f.check_box :days['monday'] %>
-
+<div class="days-form">
+<%= f.label "Monday", {:class => "welcome-alert-form lato"} %>
+<%= f.check_box :monday %>
+<%= f.label "Tuesday", {:class => "welcome-alert-form lato"} %>
+<%= f.check_box :tuesday %>
+<%= f.label "Wednesday", {:class => "welcome-alert-form lato"} %>
+<%= f.check_box :wednesday %>
+<%= f.label "Thursday", {:class => "welcome-alert-form lato"} %>
+<%= f.check_box :thursday %>
+<%= f.label "Friday", {:class => "welcome-alert-form lato"} %>
+<%= f.check_box :friday %>
+<%= f.label "Saturday", {:class => "welcome-alert-form lato"} %>
+<%= f.check_box :saturday %>
+<%= f.label "Sunday", {:class => "welcome-alert-form lato"} %>
+<%= f.check_box :sunday %>
+</div>
 
 <% if user_signed_in? %>
 <%= f.hidden_field :user_id, :value => current_user.id %>
