@@ -14,7 +14,5 @@ window.onload = function(){
     $('.notice').addClass('alert-info');
   }
 
-  $('.alert_recurring').change(function() {
-    $('.days-form').toggle();
-  });
+
 };

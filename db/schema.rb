@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131030040317) do
+ActiveRecord::Schema.define(version: 20131101183631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,14 +22,15 @@ ActiveRecord::Schema.define(version: 20131030040317) do
     t.integer "train_id"
     t.integer "user_id"
     t.boolean "recurring",    default: true
-    t.boolean "monday",       default: true
-    t.boolean "tuesday",      default: true
-    t.boolean "wednesday",    default: true
-    t.boolean "thursday",     default: true
-    t.boolean "friday",       default: true
-    t.boolean "saturday",     default: true
-    t.boolean "sunday",       default: true
-    t.string  "days_array",                  array: true
+  end
+
+  create_table "alerts_days", id: false, force: true do |t|
+    t.integer "alert_id"
+    t.integer "day_id"
+  end
+
+  create_table "days", force: true do |t|
+    t.string "name"
   end
 
   create_table "records", force: true do |t|
