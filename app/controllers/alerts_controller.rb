@@ -34,12 +34,7 @@ class AlertsController < ApplicationController
   end
 
 private
-  #This is all my privates below
-  # def alert_params
-  #   # params.require(:alert).permit(:name, :time_to_send, :train_id, :user_id, :recurring, {:day_ids => []})
 
-  #   # params[:alert].permit(day_ids: [])
-  # end
 def alert_params
   params[:alert].permit(
     :name,

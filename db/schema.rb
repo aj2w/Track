@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20131101183631) do
 
   create_table "days", force: true do |t|
     t.string "name"
+    t.string "nickname"
   end
 
   create_table "records", force: true do |t|

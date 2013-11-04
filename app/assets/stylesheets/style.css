@@ -161,7 +161,7 @@ th {
 }
 
 .alert-table-columns {
-  width: 200px;
+  min-width: 160px;
 }
 
 

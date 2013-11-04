@@ -14,5 +14,4 @@ window.onload = function(){
     $('.notice').addClass('alert-info');
   }
 
-
 };

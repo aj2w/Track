@@ -2,7 +2,7 @@
 
 <%= form_for @alert, :html => {:class => "form-inline"} do |f| %>
 
-
+<%= f.label :name, "Alert name?", {:class => "welcome-alert-form lato"} %>
 <%= f.text_field :name, :placeholder => "Alert name", :type => "text" %>
 
 
@@ -22,6 +22,8 @@
 <%= f.select :recurring, [['Yes', true], ['No', false]], {}, :class => "alert_recurring" %> -->
 
 <div class="days-form">
+  <%= hidden_field_tag "alert[day_ids][]", nil %>
+<%= f.label "Which days?", {:class => "welcome-alert-form lato"} %>
   <% Day.all.each do |day| %>
     <%= check_box_tag "alert[day_ids][]", day.id, @alert.day_ids.include?(day.id) %>
     <%= day.name %>
