@@ -3,7 +3,7 @@ namespace :testing do
   task :mail => :environment do
 
     @alert = Alert.first
-    @user = User.first
+    @user = User.find(10)
     UserMailer.selected_status(@user, @alert).deliver
     
 
