@@ -20,6 +20,10 @@ class WelcomeController < ApplicationController
     @lineSIR = Train.find(11)
   end
 
+  def ping
+    render json: "Track"
+  end
+
   def dashboard
     @alerts = Alert.where(user_id: current_user.id)
 
@@ -37,7 +41,7 @@ class WelcomeController < ApplicationController
     @lineSIR = Train.find(11)
   end
 
-private
+  private
   #This is all my privates below
   def alert_params
     params.require(:alert).permit(:time_to_send, :train_id, :user_id)
